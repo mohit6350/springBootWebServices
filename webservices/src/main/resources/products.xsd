@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/products"
+	xmlns:tns="http://www.example.org/products" elementFormDefault="qualified">
+
+
+	<element name="mobile" type="tns:mobile" />
+	<element name="television" type="tns:television" />
+	<element name="ElectronicProductsRequest" type="tns:ElectronicProductsRequest" />
+	<element name="ElectronicProductsResponse" type="tns:ElectronicProductsResponse" />
+
+
+	<complexType name="ElectronicProductsResponse">
+		<sequence>
+			<element name="mobile" type="tns:mobile" />
+			<element name="television" type="tns:television" />
+		</sequence>
+	</complexType>
+
+	<complexType name="ElectronicProductsRequest">
+		<sequence>
+			<element name="getElectronicProducts" type="boolean" />
+		</sequence>
+	</complexType>
+
+
+	<complexType name="mobile">
+		<sequence>
+			<element name="productName" type="string" />
+			<element name="price" type="int" />
+			<element name="brandName" type="string" />
+			<element name="yearLaunched" type="int" />
+		</sequence>
+	</complexType>
+
+	<complexType name="television">
+		<sequence>
+			<element name="productName" type="string" />
+			<element name="price" type="int" />
+			<element name="waranty" type="string" />
+			<element name="brandName" type="string" />
+		</sequence>
+	</complexType>
+
+
+</schema>
